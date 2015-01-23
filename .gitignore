@@ -1,0 +1,8 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Ltc.MSBuild.UpdateVersionWithOptions.targets.v12.suo
+/Ltc.MSBuild.UpdateVersionWithOptions.targets.suo
+/Ltc.MSBuild.UpdateVersionWithOptions.targets/Bin
+/Ltc.MSBuild.UpdateVersionWithOptions.targets/Ltc.MSBuild.UpdateVersionWithOptions.targets (2).nuspec

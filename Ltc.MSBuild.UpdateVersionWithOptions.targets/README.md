@@ -5,14 +5,22 @@ This is a msbuild file which will update `AssemblyInfo.cs` in your ***TFS connec
 
 How this works?
 ===============
-It queries the history from TFS, get latest **changeset id** and **modified date**, then modify the existing `AssemblyVersion` and `AssemblyFileVersion` accordingly.
+It queries the history from TFS, get latest **changeset id**, then modify the existing `AssemblyVersion` and `AssemblyFileVersion` accordingly.
 
-The version is formatted as `$(MajorVersion).$(MinorVersion).$(ChangesetId).$(Mdd)` where
+If ***$(UseBuildNumber) is 0 (Default)***, the version is formatted as `$(MajorVersion).$(MinorVersion).$(ChangesetId).$(MMdd)` where
 
 * $(MajorVersion): Default is 1
 * $(MinorVersion): Default is 0
 * $(ChangesetId): Latest changeset id of project history queried from TFS
-* $(Mdd): Latest changeset modified date in `Mdd` format
+* $(MMdd): Latest changeset modified date in `MMdd` format
+* $(BuildNumber): Default is 0 (***Ignored in this case***)
+
+If ***$(UseBuildNumber) is 1***, the version is formatted as `$(MajorVersion).$(MinorVersion).$(BuildNumber).$(ChangesetId)` where
+
+* $(MajorVersion): Default is 1
+* $(MinorVersion): Default is 0
+* $(BuildNumber): Default is 0
+* $(ChangesetId): Latest changeset id of project history queried from TFS
 
 > To prevent assembly referencing issue (strong name, version conflict, etc.), only `AssemblyFileVersion` will change all parts of revision number, `AssemblyVersion` changes only if the `MajorVersion` or `MinorVersion` have been changed.
 
