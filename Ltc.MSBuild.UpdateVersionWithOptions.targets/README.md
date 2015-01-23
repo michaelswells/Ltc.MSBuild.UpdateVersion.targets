@@ -26,7 +26,7 @@ If ***$(UseBuildNumber) is 1***, the version is formatted as `$(MajorVersion).$(
 
 How to install?
 ===============
-1. Run `Install-Package Ltc.MSBuild.UpdateVersion.targets` command in the [Package Manager Console](http://docs.nuget.org/docs/start-here/using-the-package-manager-console).
+1. Run `Install-Package Ltc.MSBuild.UpdateVersionWithOptions.targets` command in the [Package Manager Console](http://docs.nuget.org/docs/start-here/using-the-package-manager-console).
 2. Done, that's all you have to do.
 
 

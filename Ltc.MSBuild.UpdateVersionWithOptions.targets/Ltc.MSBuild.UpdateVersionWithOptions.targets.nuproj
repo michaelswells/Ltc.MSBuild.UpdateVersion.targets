@@ -26,6 +26,12 @@
       <SubType>Content</SubType>
     </Content>
     <Folder Include="tools\" />
+    <Content Include="LICENSE">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="README.md">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="tools\install.ps1">
       <SubType>Content</SubType>
     </Content>
