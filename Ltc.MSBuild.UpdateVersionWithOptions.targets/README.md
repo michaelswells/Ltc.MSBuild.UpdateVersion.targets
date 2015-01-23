@@ -1,4 +1,4 @@
-Ltc.MSBuild.UpdateVersion.targets
+Ltc.MSBuild.UpdateVersionWithOptions.targets
 =================================
 This is a msbuild file which will update `AssemblyInfo.cs` in your ***TFS connected VS project*** automatically on `Release` build.
 
